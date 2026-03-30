@@ -1,25 +1,59 @@
 <div id="game-container">
-<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-    <div class="text-center max-w-sm">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Soc Ops</h1>
-        <p class="text-lg text-gray-600 mb-8">Social Bingo</p>
+<div class="start-hero">
 
-        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-            <h2 class="font-semibold text-gray-800 mb-3">How to play</h2>
-            <ul class="text-left text-gray-600 text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
-            </ul>
+    <!-- Left: Hero content -->
+    <div class="start-left">
+        <div class="start-logo">Soc Ops</div>
+        <h1 class="start-headline">Find your<br>people.<br>Win bingo.</h1>
+        <p class="start-subhead">The icebreaker that actually works — mingle, collect squares, and claim victory.</p>
+
+        <div class="start-chips">
+            <span class="start-chip">5×5 grid</span>
+            <span class="start-chip">24 prompts</span>
+            <span class="start-chip">Real connections</span>
         </div>
 
-        <button
-            hx-post="/start"
-            hx-target="#game-container"
-            hx-swap="outerHTML"
-            class="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors">
-            Start Game
-        </button>
+        <div class="start-cta-wrap">
+            <button
+                hx-post="/start"
+                hx-target="#game-container"
+                hx-swap="outerHTML"
+                class="start-cta">
+                Let's Play →
+            </button>
+        </div>
     </div>
+
+    <!-- Right: Instructional panel -->
+    <div class="start-right">
+        <div class="start-panel">
+            <div class="start-geo" aria-hidden="true"></div>
+            <h2 class="start-panel-title">How it works</h2>
+            <ol class="start-steps">
+                <li class="start-step">
+                    <span class="start-step-num">01</span>
+                    <div class="start-step-body">
+                        <strong>Get your card</strong>
+                        <p>Tap <em>Let's Play</em> — you receive a unique 5×5 grid of social prompts.</p>
+                    </div>
+                </li>
+                <li class="start-step">
+                    <span class="start-step-num">02</span>
+                    <div class="start-step-body">
+                        <strong>Find the matches</strong>
+                        <p>Mingle and find people who match the squares on your card.</p>
+                    </div>
+                </li>
+                <li class="start-step">
+                    <span class="start-step-num">03</span>
+                    <div class="start-step-body">
+                        <strong>Mark and win</strong>
+                        <p>Tap a square when you find a match. Get 5 in a row to win!</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
 </div>
 </div>
